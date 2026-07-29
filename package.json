@@ -2,20 +2,23 @@
   "name": "backend-project",
   "version": "1.0.0",
   "main": "index.js",
-  "type" :"module",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "nodemon src/index.js"
+    "dev": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "Pathak Kush",
   "license": "ISC",
   "description": "App for backend project",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.8.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.14",
