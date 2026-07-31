@@ -3,7 +3,7 @@ import cors from "cors"
 import cookieParser from "cookie-parser"
 import { ApiResponse } from "./utils/Apiresponse.js"
 import router from "./routes/user.routes.js"
-
+import eventRouter from "./routes/event.routes.js"
 const app = express()
 
 app.use(cors({
@@ -24,5 +24,6 @@ app.get("/api/v1/healthcheck",(req,res)=>{
               .json(new ApiResponse(200,{status:"OK"},"server is ready gandaa!!"));
 });
 app.use("/api/v1/users", router);
+app.use("/api/v1/events",eventRouter);
 
 export { app };

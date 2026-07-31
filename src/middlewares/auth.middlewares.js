@@ -1,7 +1,7 @@
-import { ApiError } from "../utils/ApiError";
-import { asyncHandler } from "../utils/asyncHandler";
+import { ApiError } from "../utils/ApiError.js";
+import { asyncHandler } from "../utils/asyncHandler.js";
 import jwt from "jsonwebtoken";
-import { User } from "../models/user.models";
+import { User } from "../models/user.models.js";
 
 //this thing is running on node.js backend server.. and not on any website..
 export const verifyJWT = asyncHandler(async (req, _,next)=>{
