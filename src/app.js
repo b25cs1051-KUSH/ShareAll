@@ -6,6 +6,7 @@ import router from "./routes/user.routes.js"
 import eventRouter from "./routes/event.routes.js"
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
+import mediaRouter from "./routes/media.routes.js"
 
 
 const app = express()
@@ -38,6 +39,7 @@ app.use(cookieParser()); // Allows server to read & set HTTP-only cookies on req
 
 app.use("/api/v1/users", router);
 app.use("/api/v1/events",eventRouter);
+app.use("/api/v1/media", mediaRouter);
 //  Global Error Handler Middleware
 app.use((err,req,res,next)=>{
   const statusCode = err.statusCode ||500;
